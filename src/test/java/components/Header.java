@@ -31,8 +31,6 @@ public class Header {
     public void goToLoginPage() {
         wait.until(ExpectedConditions.elementToBeClickable(loginLink));
         loginLink.click();
-
-
     }
 
     public void goToHomePage() {
