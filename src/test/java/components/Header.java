@@ -22,6 +22,9 @@ public class Header {
     @FindBy(id = "nav-link-login")
     WebElement loginLink;
 
+    @FindBy(className = "fa-sign-out-alt")
+    WebElement logoutLink;
+
     public Header(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(8));
@@ -37,5 +40,9 @@ public class Header {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
         wait.until(ExpectedConditions.elementToBeClickable(homeLink));
         homeLink.click();
+    }
+
+    public WebElement getLogoutLink() {
+        return this.logoutLink;
     }
 }

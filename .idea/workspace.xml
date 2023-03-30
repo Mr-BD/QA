@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e3faaa-3cff-4234-a3c6-6d3a5a453b36" name="Changes" comment="TestNg and Selenium">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/components/LoginForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/components/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/components/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.LoginTest.loginTest">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="QA" />
       <method v="2">
@@ -69,6 +70,23 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="QA" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Automation_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,6 +112,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.LoginTest.loginTest" />
+        <item itemvalue="TestNG.LoginTest" />
       </list>
     </recent_temporary>
   </component>
