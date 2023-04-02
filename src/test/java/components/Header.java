@@ -1,48 +1,35 @@
 package components;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.BasePage;
 
-import java.time.Duration;
-
-
-public class Header {
-    private final WebDriver driver;
-    private final WebDriverWait wait;
-
-    @FindBy(id = "nav-link-home")
-    WebElement homeLink;
+public class Header extends BasePage {
 
     @FindBy(id = "nav-link-login")
     WebElement loginLink;
 
-    @FindBy(className = "fa-sign-out-alt")
-    WebElement logoutLink;
+    @FindBy(id = "nav-link-home")
+    WebElement homeLink;
+
+    @FindBy(id = "nav-link-new-post")
+    WebElement newPostLink;
+
+    @FindBy(id = "nav-link-profile")
+    WebElement profileLink;
+
 
     public Header(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
     public void goToLoginPage() {
-        wait.until(ExpectedConditions.elementToBeClickable(loginLink));
-        loginLink.click();
+        clickElement(loginLink);
     }
 
-    public void goToHomePage() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
-        wait.until(ExpectedConditions.elementToBeClickable(homeLink));
-        homeLink.click();
-    }
 
-    public WebElement getLogoutLink() {
-        return this.logoutLink;
-    }
 }

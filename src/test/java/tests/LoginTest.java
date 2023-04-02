@@ -1,24 +1,21 @@
 package tests;
 
+
 import components.Header;
-import components.LoginForm;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import pages.HomePage;
 
 import java.time.Duration;
 
 public class LoginTest {
-    private WebDriver driver;
+    public final String HOME_URL = "http://training.skillo-bg.com:4200";
+    protected WebDriver driver;
 
     @BeforeSuite
     public void setupSuite() {
@@ -33,8 +30,6 @@ public class LoginTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-
 //        ChromeOptions chromeOptions = new ChromeOptions();
 //        chromeOptions.addArguments("--remote-allow-origins=*");
 //        driver = new ChromeDriver(chromeOptions);
@@ -45,18 +40,24 @@ public class LoginTest {
     }
 
     @Test
-    public void loginTest() {
+    public void login() {
         //1. Navigate to home page
-        HomePage homePage = new HomePage(driver);
-        homePage.navigate();
+        driver.get(HOME_URL);
         //2. Click on login link and go to login page
         Header header = new Header(driver);
         header.goToLoginPage();
+
+
         //3. Login with existing user
-//        LoginForm loginForm = new LoginForm(driver);
-//        loginForm.login();
-        //4. Verify that we're logged by going to Profile page
-//        Assert.assertFalse(header.getLogoutLink().isDisplayed());
+//     //4. Verify that we're logged by going to Profile page
+//
+    }
+
+    @AfterMethod
+    public void cleanup() {
+        if (driver != null) {
+            driver.close();
+        }
     }
 
 
