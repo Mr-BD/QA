@@ -1,6 +1,6 @@
 Test cases:
 
-1. As a user I'm able to login
+[x] 1. As a user I'm able to login
 2. As I use I want to be able to create a new Post
 // What are the steps
 3. As a user I'm able to logout from my profile

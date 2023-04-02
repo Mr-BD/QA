@@ -9,10 +9,8 @@ public class PostsPage extends BasePage {
         super(driver);
     }
 
-
     public void verifyPostsPageUrl() {
         verifyUrl(POSTS_PAGE_URL);
     }
-
 
 }

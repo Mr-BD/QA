@@ -4,4 +4,9 @@
             <class name="tests.LoginTest"/>
         </classes>
     </test>
+    <test name="CretePost">
+        <classes>
+            <class name="tests.CreatePostTest"/>
+        </classes>
+    </test>
 </suite>
