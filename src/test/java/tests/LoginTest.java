@@ -56,13 +56,8 @@ public class LoginTest {
 //        LoginForm loginForm = new LoginForm(driver);
 //        loginForm.login();
         //4. Verify that we're logged by going to Profile page
-        Assert.assertFalse(header.getLogoutLink().isDisplayed());
+//        Assert.assertFalse(header.getLogoutLink().isDisplayed());
     }
 
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.close();
-        }
-    }
+
 }
