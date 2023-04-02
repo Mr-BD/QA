@@ -10,6 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import pages.LoginPage;
 
 import java.time.Duration;
 
@@ -46,19 +47,21 @@ public class LoginTest {
         //2. Click on login link and go to login page
         Header header = new Header(driver);
         header.goToLoginPage();
-
-
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.verifyLoginUrl();
         //3. Login with existing user
+        loginPage.login();
+
 //     //4. Verify that we're logged by going to Profile page
 //
     }
 
-    @AfterMethod
-    public void cleanup() {
-        if (driver != null) {
-            driver.close();
-        }
-    }
-
+//    @AfterMethod
+//    public void cleanup() {
+//        if (driver != null) {
+//            driver.close();
+//        }
+//    }
+//
 
 }

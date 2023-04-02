@@ -29,4 +29,8 @@ public class BasePage {
         smallWait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
+
+    public void verifyUrl(String url) {
+        mediumWait.until(ExpectedConditions.urlToBe(url));
+    }
 }
