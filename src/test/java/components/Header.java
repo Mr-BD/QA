@@ -31,5 +31,9 @@ public class Header extends BasePage {
         clickElement(loginLink);
     }
 
+    public void goToCreatePostPage() {
+        clickElement(newPostLink);
+    }
+
 
 }

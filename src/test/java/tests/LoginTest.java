@@ -12,7 +12,7 @@ public class LoginTest extends BaseTest {
     public Object[][] getData() {
         return new Object[][]{
                 {
-                        "auto_user", "auto_pass"
+                        "TestUser555", "123123"
                 }
         };
     }

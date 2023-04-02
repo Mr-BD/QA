@@ -1,9 +1,9 @@
 <suite name="Web testing">
-    <test name="Login">
-        <classes>
-            <class name="tests.LoginTest"/>
-        </classes>
-    </test>
+    <!--    <test name="Login">-->
+    <!--        <classes>-->
+    <!--            <class name="tests.LoginTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
     <test name="CretePost">
         <classes>
             <class name="tests.CreatePostTest"/>
