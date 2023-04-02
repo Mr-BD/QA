@@ -9,7 +9,6 @@ import java.time.Duration;
 
 public class BasePage {
     protected final WebDriver driver;
-
     protected final WebDriverWait smallWait;
     protected final WebDriverWait mediumWait;
 

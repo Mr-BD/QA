@@ -6,11 +6,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.*;
 import pages.LoginPage;
+import pages.PostsPage;
 
 import java.time.Duration;
 
@@ -21,7 +22,6 @@ public class LoginTest {
     @BeforeSuite
     public void setupSuite() {
         WebDriverManager.firefoxdriver().setup();
-        //WebDriverManager.chromedriver().setup();
     }
 
     @BeforeMethod
@@ -31,17 +31,19 @@ public class LoginTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--remote-allow-origins=*");
-//        driver = new ChromeDriver(chromeOptions);
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
     }
 
-    @Test
-    public void login() {
+    @DataProvider(name = "loginData")
+    public Object[][] getData() {
+        return new Object[][]{
+                {
+                        "auto_user", "auto_pass"
+                }
+        };
+    }
+
+    @Test(dataProvider = "loginData")
+    public void login(String username, String password) {
         //1. Navigate to home page
         driver.get(HOME_URL);
         //2. Click on login link and go to login page
@@ -50,18 +52,17 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.verifyLoginUrl();
         //3. Login with existing user
-        loginPage.login();
-
-//     //4. Verify that we're logged by going to Profile page
-//
+        loginPage.login(username, password);
+        //4. Verify that we're logged by going to Profile page
+        PostsPage postsPage = new PostsPage(driver);
+        postsPage.verifyPostsPageUrl();
     }
 
-//    @AfterMethod
-//    public void cleanup() {
-//        if (driver != null) {
-//            driver.close();
-//        }
-//    }
-//
+    @AfterMethod
+    public void cleanup() {
+        if (driver != null) {
+            driver.close();
+        }
+    }
 
 }

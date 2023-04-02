@@ -12,7 +12,7 @@ public class LoginPage extends BasePage {
     public final String LOGIN_URL = "http://training.skillo-bg.com:4200/users/login";
 
     @FindBy(id = "defaultLoginFormUsername")
-    WebElement userName;
+    WebElement username;
 
     @FindBy(id = "defaultLoginFormPassword")
     WebElement password;
@@ -30,9 +30,9 @@ public class LoginPage extends BasePage {
     }
 
 
-    public void login() {
-        enterText(userName, "auto_user");
-        enterText(password, "auto_pass");
+    public void login(String _username, String _password) {
+        enterText(username, _username);
+        enterText(password, _password);
         clickElement(loginButton);
 
     }
