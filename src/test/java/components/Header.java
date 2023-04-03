@@ -1,6 +1,5 @@
 package components;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,8 +30,13 @@ public class Header extends BasePage {
         clickElement(loginLink);
     }
 
+    public void goToProfilePage() {
+        clickElement(profileLink);
+    }
+
     public void goToCreatePostPage() {
         clickElement(newPostLink);
+
     }
 
 

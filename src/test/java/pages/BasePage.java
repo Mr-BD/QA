@@ -32,4 +32,10 @@ public class BasePage {
     public void verifyUrl(String url) {
         mediumWait.until(ExpectedConditions.urlToBe(url));
     }
+
+
+    public void verifyUrlContains(String url) {
+        mediumWait.until(ExpectedConditions.urlContains(url));
+    }
+
 }

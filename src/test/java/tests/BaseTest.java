@@ -34,7 +34,7 @@ public class BaseTest {
     @AfterMethod
     public void cleanup() {
         if (driver != null) {
-            driver.close();
+            driver.quit();
         }
     }
 
