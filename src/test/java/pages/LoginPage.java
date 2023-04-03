@@ -29,7 +29,6 @@ public class LoginPage extends BasePage {
         verifyUrl(LOGIN_URL);
     }
 
-
     public void login(String _username, String _password) {
         enterText(username, _username);
         enterText(password, _password);

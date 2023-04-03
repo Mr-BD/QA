@@ -4,9 +4,16 @@
     <!--            <class name="tests.LoginTest"/>-->
     <!--        </classes>-->
     <!--    </test>-->
-    <test name="CretePost">
+    <!--    <test name="CretePost">-->
+    <!--        <classes>-->
+    <!--            <class name="tests.CreatePostTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <test name="LikeAPost">
+        <parameter name="username" value="TestUser555"/>
+        <parameter name="password" value="123123"/>
         <classes>
-            <class name="tests.CreatePostTest"/>
+            <class name="tests.LikeAPostTest"/>
         </classes>
     </test>
 </suite>

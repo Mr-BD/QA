@@ -36,8 +36,7 @@ public class Header extends BasePage {
 
     public void goToCreatePostPage() {
         clickElement(newPostLink);
-
     }
 
-
+    
 }
