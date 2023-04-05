@@ -12,7 +12,6 @@ import java.util.List;
 public class CreatePostPage extends BasePage {
     public final String CREATE_POST_URL = "http://training.skillo-bg.com:4200/posts/create";
 
-
     @FindBy(name = "caption")
     WebElement postCaption;
 
@@ -52,5 +51,6 @@ public class CreatePostPage extends BasePage {
         uploadImage(image);
         clickElement(submitButton);
     }
+
 
 }

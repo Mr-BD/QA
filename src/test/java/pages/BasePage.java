@@ -33,9 +33,13 @@ public class BasePage {
         mediumWait.until(ExpectedConditions.urlToBe(url));
     }
 
-
     public void verifyUrlContains(String url) {
         mediumWait.until(ExpectedConditions.urlContains(url));
+    }
+
+    public String getElementText(WebElement element) {
+        smallWait.until(ExpectedConditions.visibilityOf(element));
+        return element.getText();
     }
 
 }
