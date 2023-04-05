@@ -9,11 +9,18 @@
     <!--            <class name="tests.CreatePostTest"/>-->
     <!--        </classes>-->
     <!--    </test>-->
-    <test name="LikeAPost">
+    <!--    <test name="LikeAPost">-->
+    <!--        <parameter name="username" value="TestUser555"/>-->
+    <!--        <parameter name="password" value="123123"/>-->
+    <!--        <classes>-->
+    <!--            <class name="tests.LikeAPostTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <test name="CommentAPost">
         <parameter name="username" value="TestUser555"/>
         <parameter name="password" value="123123"/>
         <classes>
-            <class name="tests.LikeAPostTest"/>
+            <class name="tests.CommentAPostTest"/>
         </classes>
     </test>
 </suite>
