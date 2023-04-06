@@ -1,15 +1,14 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class PostsPage extends BasePage {
 
@@ -81,6 +80,11 @@ public class PostsPage extends BasePage {
 
     public String selectNewestComment() {
         smallWait.until(ExpectedConditions.visibilityOfAllElements(comments));
-        return comments.get(comments.size() - 1).getText();
+        WebElement newestComment = comments.get(comments.size() - 1);
+        return getElementText(newestComment);
+    }
+
+    public void waitForCommentsToBeUpdated() {
+        smallWait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".comment-container .comment-content"), comments.size() + 1));
     }
 }

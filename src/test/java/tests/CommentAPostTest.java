@@ -1,5 +1,6 @@
 package tests;
 
+import com.github.javafaker.Faker;
 import components.Header;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
@@ -8,10 +9,10 @@ import pages.LoginPage;
 import pages.PostsPage;
 
 public class CommentAPostTest extends BaseTest {
-
     @Parameters({"username", "password"})
     @Test
     public void shouldBeAbleToLeaveACommentUnderAPost(String username, String password) {
+        Faker faker = new Faker();
         //1. Login with existing user
         Header header = new Header(driver);
         header.goToLoginPage();
@@ -26,10 +27,11 @@ public class CommentAPostTest extends BaseTest {
         //4. Verify that the post is opened inside the modal
         postsPage.waitForSelectedModalToBeVisible();
         //5. Submit a new comment
-        String newComment = "ggg";
+        String newComment = faker.friends().quote();
         postsPage.fillCommentInput(newComment);
         postsPage.submitForm();
         //6. Verify that the last comment on the post matches the text of our comment
+        postsPage.waitForCommentsToBeUpdated();
         String newestComment = postsPage.selectNewestComment();
         Assert.assertEquals(newestComment, newComment, "Latest comment did not match the one that you've created");
     }

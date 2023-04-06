@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e3faaa-3cff-4234-a3c6-6d3a5a453b36" name="Changes" comment="TestNg and Selenium">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CommentAPostTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/PostsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/PostsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/reports/Web testing/CommentAPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/reports/Web testing/CommentAPost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CommentAPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CommentAPostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -131,6 +133,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="TestNg and Selenium" />
     <option name="LAST_COMMIT_MESSAGE" value="TestNg and Selenium" />
   </component>
