@@ -11,6 +11,9 @@ import java.util.List;
 public class ProfilePage extends BasePage {
     public final String URL = "http://training.skillo-bg.com:4200/users";
 
+    @FindBy(css = ".profile-user-settings h2")
+    WebElement username;
+
     @FindBy(css = "app-post")
     List<WebElement> posts;
 
@@ -26,5 +29,9 @@ public class ProfilePage extends BasePage {
     public int getNumberOfPosts() {
         mediumWait.until(ExpectedConditions.visibilityOfAllElements(posts));
         return posts.size();
+    }
+
+    public String getUsername() {
+        return getElementText(username);
     }
 }

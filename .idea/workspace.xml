@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e3faaa-3cff-4234-a3c6-6d3a5a453b36" name="Changes" comment="TestNg and Selenium">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/resources/reports/Web testing/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/RegisterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/PostsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/PostsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/reports/Web testing/CommentAPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/reports/Web testing/CommentAPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CommentAPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CommentAPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_CASES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/reports/Web testing/CommentAPost.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,5 +145,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QA$WebTesting.ic" NAME="WebTesting Coverage Results" MODIFIED="1680797874440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,26 +1,31 @@
 <suite name="Web testing">
-    <!--    <test name="Login">-->
-    <!--        <classes>-->
-    <!--            <class name="tests.LoginTest"/>-->
-    <!--        </classes>-->
-    <!--    </test>-->
-    <!--    <test name="CretePost">-->
-    <!--        <classes>-->
-    <!--            <class name="tests.CreatePostTest"/>-->
-    <!--        </classes>-->
-    <!--    </test>-->
-    <!--    <test name="LikeAPost">-->
-    <!--        <parameter name="username" value="TestUser555"/>-->
-    <!--        <parameter name="password" value="123123"/>-->
-    <!--        <classes>-->
-    <!--            <class name="tests.LikeAPostTest"/>-->
-    <!--        </classes>-->
-    <!--    </test>-->
+    <test name="Login">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    <test name="CreatePost">
+        <classes>
+            <class name="tests.CreatePostTest"/>
+        </classes>
+    </test>
+    <test name="LikeAPost">
+        <parameter name="username" value="TestUser555"/>
+        <parameter name="password" value="123123"/>
+        <classes>
+            <class name="tests.LikeAPostTest"/>
+        </classes>
+    </test>
     <test name="CommentAPost">
         <parameter name="username" value="TestUser555"/>
         <parameter name="password" value="123123"/>
         <classes>
             <class name="tests.CommentAPostTest"/>
+        </classes>
+    </test>
+    <test name="Register">
+        <classes>
+            <class name="tests.RegisterTest"/>
         </classes>
     </test>
 </suite>

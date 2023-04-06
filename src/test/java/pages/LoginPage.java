@@ -11,6 +11,9 @@ import java.time.Duration;
 public class LoginPage extends BasePage {
     public final String LOGIN_URL = "http://training.skillo-bg.com:4200/users/login";
 
+    @FindBy(linkText = "Register")
+    WebElement registerLink;
+
     @FindBy(id = "defaultLoginFormUsername")
     WebElement username;
 
@@ -29,11 +32,14 @@ public class LoginPage extends BasePage {
         verifyUrl(LOGIN_URL);
     }
 
+    public void goToRegister() {
+        clickElement(registerLink);
+    }
+
     public void login(String _username, String _password) {
         enterText(username, _username);
         enterText(password, _password);
         clickElement(loginButton);
-
     }
 
 }
